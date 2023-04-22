@@ -11,4 +11,7 @@ class Pet extends Model
     protected $fillable = [
         'name', 'age', 'user_id',
     ];
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
